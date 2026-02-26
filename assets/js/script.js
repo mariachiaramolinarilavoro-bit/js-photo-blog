@@ -39,6 +39,9 @@ Buon Lavoro e buon divertimento! */
 
 const callPostman = 'https://lanciweb.github.io/demo/api/pictures/'
 
+const rowEl = document.querySelector('.row')
+console.log(rowEl);
+
 fetch(callPostman)
     .then(response => response.json())
     .then(data => {
@@ -63,5 +66,13 @@ fetch(callPostman)
         })
     })
 
-const rowEl = document.querySelector('.row')
 
+const buttonEl = document.querySelector('button')
+buttonEl.addEventListener('click', function(){
+      document.getElementById("overlay").style.display = "none";
+})
+
+
+function on() {
+  document.getElementById("overlay").style.display = "block";
+}
