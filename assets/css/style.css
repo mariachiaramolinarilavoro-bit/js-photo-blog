@@ -1,0 +1,42 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: sans-serif;
+}
+
+.summer {
+    background-image: url(../img/wall.png);
+    text-align: center;
+    padding: 20px 0;
+}
+
+.summer-year {
+    font-family: 'Edu TAS Beginner', sans-serif;
+}
+
+.cards {
+    background-image: url(../img/cork.png);
+    padding: 60px 0;
+}
+
+.card {
+    padding: 15px;
+    position: relative;
+    box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.cards .card {
+    border-radius: 0;
+}
+
+.pin {
+    position: absolute;
+    top: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 30px;
+}
