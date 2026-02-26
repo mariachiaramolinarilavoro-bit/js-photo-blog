@@ -50,7 +50,7 @@ fetch(callPostman)
             console.log(url);
             
             rowEl.innerHTML += `
-                <div class="col-4 g-4">
+                <div class="col col-sm-6 col-md-6 col-xl-4 g-4">
                     <div class="card" style="width: 18rem;">
                         <img class="pin" src="./assets/img/pin.svg" alt="pin">
                         <img src="${url}" class="card-img-top" alt="bunny-fuzzy">
@@ -64,3 +64,4 @@ fetch(callPostman)
     })
 
 const rowEl = document.querySelector('.row')
+
