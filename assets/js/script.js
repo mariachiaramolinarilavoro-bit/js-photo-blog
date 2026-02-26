@@ -36,3 +36,5 @@ Tickets: Durante questa ultima fase, il supporto tickets mattina e pomeriggio sa
  Importante!! Non usare l'intelligenza artificiale per svolgere l'esercizio ,
 
 Buon Lavoro e buon divertimento! */
+
+const callPostman = 'https://lanciweb.github.io/demo/api/pictures/'
