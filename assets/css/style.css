@@ -20,7 +20,7 @@ body {
     font-family: 'Edu TAS Beginner', sans-serif;
 }
 
-.cards {
+.wall-main {
     background-image: url(../img/cork.png);
     padding: 60px 0;
 }
@@ -31,7 +31,7 @@ body {
     box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.3);
 }
 
-.cards .card {
+.wall-main .card {
     border-radius: 0;
 }
 

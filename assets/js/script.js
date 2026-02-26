@@ -38,3 +38,29 @@ Tickets: Durante questa ultima fase, il supporto tickets mattina e pomeriggio sa
 Buon Lavoro e buon divertimento! */
 
 const callPostman = 'https://lanciweb.github.io/demo/api/pictures/'
+
+fetch(callPostman)
+    .then(response => response.json())
+    .then(data => {
+        console.log(data);
+        
+        console.log(data.url);
+        data.forEach(singleData => {
+            const {url, date, title} = singleData    //destrutturazione
+            console.log(url);
+            
+            rowEl.innerHTML += `
+                <div class="col-4 g-4">
+                    <div class="card" style="width: 18rem;">
+                        <img class="pin" src="./assets/img/pin.svg" alt="pin">
+                        <img src="${url}" class="card-img-top" alt="bunny-fuzzy">
+                        <div class="card-body">
+                            <span>${date}</span>
+                            <h2>${title}</h2>
+                        </div>
+                    </div>
+                </div> `
+        })
+    })
+
+const rowEl = document.querySelector('.row')
