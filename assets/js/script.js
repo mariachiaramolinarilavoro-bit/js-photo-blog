@@ -67,13 +67,16 @@ fetch(callPostman)
         })
         const imgEl = document.querySelectorAll('.card-img-top')
 
-        console.log(imgEl);
-        
+        const imgsEl = document.querySelector('.fuzzy')
+
         imgEl.forEach(singleImg => {
             singleImg.addEventListener('click', function () {
                 document.getElementById("overlay").style.display = "block";
+                imgsEl.src = singleImg.src
             })
-
+            
+            console.log(singleImg);
+            
         })
         console.log(imgEl);
 
@@ -85,5 +88,6 @@ const buttonEl = document.querySelector('button')
 buttonEl.addEventListener('click', function () {
     document.getElementById("overlay").style.display = "none";
 })
+
 
 
