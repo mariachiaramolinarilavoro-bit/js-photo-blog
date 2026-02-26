@@ -88,6 +88,3 @@ const buttonEl = document.querySelector('button')
 buttonEl.addEventListener('click', function () {
     document.getElementById("overlay").style.display = "none";
 })
-
-
-
