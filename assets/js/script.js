@@ -46,12 +46,12 @@ fetch(callPostman)
     .then(response => response.json())
     .then(data => {
         console.log(data);
-        
+
         console.log(data.url);
         data.forEach(singleData => {
-            const {url, date, title} = singleData    //destrutturazione
+            const { url, date, title } = singleData    //destrutturazione
             console.log(url);
-            
+
             rowEl.innerHTML += `
                 <div class="col col-sm-6 col-md-6 col-xl-4 g-4">
                     <div class="card" style="width: 18rem;">
@@ -63,16 +63,27 @@ fetch(callPostman)
                         </div>
                     </div>
                 </div> `
+
         })
+        const imgEl = document.querySelectorAll('.card-img-top')
+
+        console.log(imgEl);
+        
+        imgEl.forEach(singleImg => {
+            singleImg.addEventListener('click', function () {
+                document.getElementById("overlay").style.display = "block";
+            })
+
+        })
+        console.log(imgEl);
+
     })
 
 
 const buttonEl = document.querySelector('button')
-buttonEl.addEventListener('click', function(){
-      document.getElementById("overlay").style.display = "none";
+
+buttonEl.addEventListener('click', function () {
+    document.getElementById("overlay").style.display = "none";
 })
 
 
-function on() {
-  document.getElementById("overlay").style.display = "block";
-}
